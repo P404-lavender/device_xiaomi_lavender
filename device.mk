@@ -29,8 +29,11 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay
 
 PRODUCT_PACKAGES += \
+    LavenderWifiOverlay \
     NoCutoutOverlay \
-    NotchBarKiller
+    NotchBarKiller \
+    P404LavenderFrameworks \
+    P404LavenderSystumUI
 
 # Power
 PRODUCT_COPY_FILES += \
@@ -55,10 +58,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
-
-# Wifi
-PRODUCT_PACKAGES += \
-    LavenderWifiOverlay
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/lavender/lavender-vendor.mk)
